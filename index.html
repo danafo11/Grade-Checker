@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Checker</title>
+    <link rel="stylesheet" href="bootstrap.css">
+</head>
+<body class="ms-2 me-2">
+    <div class="container col-lg-7 col-md-7 col-sm-9 mt-lg-4 mt-lg-4 mt-sm-2 mx-auto shadow p-5 rounded-3">
+        <h1 class="text-center">GRADE CHECKER</h1>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="yourScore" placeholder="name@example.com">
+                <label for="floatingInput">Enter your score here</label>
+            </div>
+          <!-- <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Password</label>
+          </div> -->
+
+          <div class="button">
+            <button type="button" class="btn btn-primary" onclick="checkScore()">Check grade</button>
+          </div>
+    </div>
+
+    <div class="mt-5 text-center" id="showScore"></div>
+    
+    <script>
+        function checkScore() {
+            // alert("I am working")
+            var score = document.getElementById("yourScore").value;
+            if (score >= 0 && score <=39) {
+                // alert("You Failed F")
+                var result = "You Failed F";
+                showScore.innerHTML = result;
+                showScore.style.color = "red";
+            } else if (score >=40 && score <=44) {
+                // alert("you Passed E")
+                var result = "You Passed E";
+                showScore.innerHTML = result;
+                showScore.style.color = "red";
+            }
+            else if(score >=45 && score <=49) {
+                // alert("You passed on Average D")
+                var result = "You passed on Average D";
+                showScore.innerHTML = result;
+                showScore.style.color = "red";
+            }
+            else if(score >=50 && score <=59) {
+                // alert("You passed on Credit C")
+                var result = "You passed on Credit C";
+                showScore.innerHTML = result;
+                showScore.style.color = "green";
+            }
+            else if(score >=60 && score <=69) {
+                // alert("You passed on Good B")
+                var result = "You passed on Good B";
+                showScore.innerHTML = result;
+                showScore.style.color = "blue";
+            }
+            else if(score >=70 && score <=100) {
+                // alert("You passed on Excellent A")
+                var result = "You passed on Excellent A";
+                showScore.innerHTML = result;
+                showScore.style.color = "blue";
+            }
+        }
+    </script>
+</body>
+</html>
