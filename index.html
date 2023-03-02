@@ -30,8 +30,19 @@
         function checkScore() {
             // alert("I am working")
             var score = document.getElementById("yourScore").value;
-            if (score >= 0 && score <=39) {
-                // alert("You Failed F")
+            
+            if (score == "") {
+                // alert("Please enter your score")
+                var result = "Please enter your score";
+                showScore.innerHTML = result;
+                showScore.style.color = "red";
+            } else if (score >100 && score <0) {
+                // alert("Invalid score")
+                var result = "Invalid score";
+                showScore.innerHTML = result;
+                showScore.style.color = "red";
+            } else if (score >=0 && score <=39) {
+                // alert("you Failed F")
                 var result = "You Failed F";
                 showScore.innerHTML = result;
                 showScore.style.color = "red";
